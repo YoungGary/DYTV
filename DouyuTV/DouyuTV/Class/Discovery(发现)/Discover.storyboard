@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UEC-g5-CGz">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Wsg-0a-Wub">
+            <objects>
+                <viewController id="loL-Gi-fDj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7XN-zT-avV"/>
+                        <viewControllerLayoutGuide type="bottom" id="dwB-f4-Scq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nQf-fL-5a3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3V6-Aw-LPO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5Y-vG-ulo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="1512"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="QrL-rV-9RD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UEC-g5-CGz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" image="tabDiscovery_24x24_" selectedImage="tabDiscoveryHL_24x24_" id="7Lu-p4-i1i"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wdV-8i-zBe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="loL-Gi-fDj" kind="relationship" relationship="rootViewController" id="UZl-j4-dXf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGC-CC-1Gw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="1512"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabDiscoveryHL_24x24_" width="24" height="24"/>
+        <image name="tabDiscovery_24x24_" width="24" height="24"/>
+    </resources>
+</document>
