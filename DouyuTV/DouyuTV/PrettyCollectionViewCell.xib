@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PrettyCollectionViewCell" customModule="DouyuTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="258"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="258"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_player_normal_14x14_" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-bt-Rq2">
+                        <rect key="frame" x="5" y="239" width="14" height="14"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是主播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuC-Bm-DXo">
+                        <rect key="frame" x="24" y="239" width="45" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_vertical_locate_12x12_" translatesAutoresizingMaskIntoConstraints="NO" id="veR-4P-nLq">
+                        <rect key="frame" x="175" y="240.5" width="12" height="12"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="上海市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92c-gq-MBl">
+                        <rect key="frame" x="192" y="239.5" width="34" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="249" image="live_cell_default_phone_103x103_" translatesAutoresizingMaskIntoConstraints="NO" id="HeP-kB-aYc">
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="234.5"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-BL-g6a">
+                        <rect key="frame" x="175" y="5" width="51" height="15"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="66666" image="video_viewer_12x12_">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="92c-gq-MBl" secondAttribute="bottom" constant="5" id="01M-FF-znk"/>
+                <constraint firstItem="92c-gq-MBl" firstAttribute="leading" secondItem="veR-4P-nLq" secondAttribute="trailing" constant="5" id="1n3-mq-44q"/>
+                <constraint firstAttribute="trailing" secondItem="HeP-kB-aYc" secondAttribute="trailing" id="4CF-Zt-zhE"/>
+                <constraint firstItem="HeP-kB-aYc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5K2-Ba-n4a"/>
+                <constraint firstItem="92c-gq-MBl" firstAttribute="top" secondItem="HeP-kB-aYc" secondAttribute="bottom" constant="5" id="9cm-7E-5Mr"/>
+                <constraint firstAttribute="trailing" secondItem="92c-gq-MBl" secondAttribute="trailing" constant="5" id="E02-Bd-GjI"/>
+                <constraint firstItem="veR-4P-nLq" firstAttribute="centerY" secondItem="92c-gq-MBl" secondAttribute="centerY" id="RD2-6a-2yy"/>
+                <constraint firstItem="ieo-bt-Rq2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="b0G-9g-eqb"/>
+                <constraint firstItem="AuC-Bm-DXo" firstAttribute="centerY" secondItem="ieo-bt-Rq2" secondAttribute="centerY" id="bEN-ir-IDJ"/>
+                <constraint firstItem="HeP-kB-aYc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bjv-Jh-3OM"/>
+                <constraint firstAttribute="trailing" secondItem="Lsb-BL-g6a" secondAttribute="trailing" constant="5" id="jBx-BI-jwv"/>
+                <constraint firstItem="AuC-Bm-DXo" firstAttribute="leading" secondItem="ieo-bt-Rq2" secondAttribute="trailing" constant="5" id="p4m-Du-5sB"/>
+                <constraint firstAttribute="bottom" secondItem="ieo-bt-Rq2" secondAttribute="bottom" constant="5" id="paG-HS-NDh"/>
+                <constraint firstItem="Lsb-BL-g6a" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="taU-yK-pCX"/>
+            </constraints>
+            <size key="customSize" width="231" height="258"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="back_image" destination="HeP-kB-aYc" id="4SI-Ca-aEf"/>
+                <outlet property="locate_city" destination="92c-gq-MBl" id="Ljz-Ms-k9w"/>
+                <outlet property="nickName" destination="AuC-Bm-DXo" id="xgQ-mN-fBF"/>
+                <outlet property="online_button" destination="Lsb-BL-g6a" id="kdL-uB-ey7"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="-97"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_live_player_normal_14x14_" width="14" height="14"/>
+        <image name="home_live_vertical_locate_12x12_" width="12" height="12"/>
+        <image name="live_cell_default_phone_103x103_" width="103" height="103"/>
+        <image name="video_viewer_12x12_" width="12" height="12"/>
+    </resources>
+</document>

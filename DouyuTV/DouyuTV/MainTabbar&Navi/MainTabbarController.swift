@@ -19,7 +19,7 @@ class MainTabbarController: UITabBarController {
         addChildVCs("Mine")
     }
     
-    func addChildVCs(name : String) -> () {
+    func addChildVCs(_ name : String) -> () {
          let vc =  UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()!
         addChildViewController(vc)
     }
