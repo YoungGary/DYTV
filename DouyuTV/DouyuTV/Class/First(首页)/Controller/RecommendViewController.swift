@@ -24,6 +24,8 @@ let prettyID = "prettyID"
 
 //cycle
 let kCycleViewY = kScreenWidth * 3/8
+//selectViewH
+let kSelectViewH : CGFloat = 90
 
 class RecommendViewController: UIViewController ,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
@@ -61,9 +63,16 @@ class RecommendViewController: UIViewController ,UICollectionViewDataSource,UICo
     lazy var cycleView : CycleView = {
         let cycleView = CycleView.loadViewWithNib()
         
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewY, width: kScreenWidth, height: kCycleViewY)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewY+kSelectViewH), width: kScreenWidth, height: kCycleViewY)
         
         return cycleView
+    }()
+    
+    lazy var selectView : SelectView = {
+        let selectView = SelectView.loadViewWithNib()
+        
+        selectView.frame = CGRect(x: 0, y: -kSelectViewH, width: kScreenWidth, height: kSelectViewH)
+        return selectView
     }()
     
     override func viewDidLoad() {
@@ -73,7 +82,7 @@ class RecommendViewController: UIViewController ,UICollectionViewDataSource,UICo
         //fetch data
         fetchDataFromNet()
         
-        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewY, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewY+kSelectViewH, 0, 0, 0)
     }
 
    
@@ -85,6 +94,8 @@ extension RecommendViewController{
     func setupInterface() -> () {
         view.addSubview(collectionView)
         collectionView.addSubview(cycleView)
+        collectionView.addSubview(selectView)
+        
     }
     func fetchDataFromNet(){
         viewModel.fetchData { 

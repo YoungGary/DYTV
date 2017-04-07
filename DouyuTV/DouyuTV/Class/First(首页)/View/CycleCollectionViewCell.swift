@@ -4,7 +4,7 @@
 //
 //  Created by YOUNG on 2017/3/17.
 //  Copyright © 2017年 Young. All rights reserved.
-//
+// 轮播图cell
 
 import UIKit
 import Kingfisher

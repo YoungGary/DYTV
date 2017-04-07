@@ -24,12 +24,10 @@ class HomeViewController: UIViewController,ScrollTitleViewDelegate ,PageContentV
         
         var childVCs = [UIViewController]()
         childVCs.append(RecommendViewController())
-        for _ in 0..<4{
-            let vc = UIViewController()
-            vc.view.frame = frame
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g:  CGFloat(arc4random_uniform(255)), b:  CGFloat(arc4random_uniform(255)))
-            childVCs.append(vc)
-        }
+        childVCs.append(PhoneGameViewController())
+        childVCs.append(EnterTainMentViewController())
+        childVCs.append(GameViewController())
+        childVCs.append(FunViewController())
         
         let contentView = PageContentView(frame: frame, childVCs: childVCs, parentVC: self)
         contentView.delegate = self

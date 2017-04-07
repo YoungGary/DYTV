@@ -4,7 +4,7 @@
 //
 //  Created by YOUNG on 2017/3/17.
 //  Copyright © 2017年 Young. All rights reserved.
-//
+//  推荐页的最上方轮播图
 
 import UIKit
 

@@ -29,6 +29,8 @@ class Groups: NSObject {
     
     var authors : [Anchor] = [Anchor]()
     
+    var icon_url : String = ""
+    
     override init() {
         
     }

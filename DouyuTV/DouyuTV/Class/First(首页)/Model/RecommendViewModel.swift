@@ -51,29 +51,7 @@ class RecommendViewModel: NSObject {
             gcdGroup.leave()
            // print("finish--0")
         }
-//        //fetch 手游 section = 1
-//        //https://apiv2.douyucdn.cn/Live/Roomlist/getMobileGameRoomList?limit=4&client_sys=ios&offset=0
-//        let phoneUrl = "https://apiv2.douyucdn.cn/Live/Roomlist/getMobileGameRoomList"
-//       
-//        let phoneParams = ["limit": "4","client_sys":"ios","offset":"0"]
-//        dispatch_group_enter(gcdGroup)
-//        NetworkTools.requestDataWithGet(phoneUrl, params: phoneParams) { (results) in
-//            guard let resultDict = results as? [String : AnyObject] else{return}
-//            guard let dataArr = resultDict["data"]!["room_list"] as? [[String : AnyObject]] else{
-//                return
-//            }
-//            print(dataArr.count)
-//            self.mobileGroup.tag_name = "手游"
-//            self.mobileGroup.icon = "home_column_phoneGame_20x20_"
-//            
-//            for dict in dataArr{
-//                
-//                let pretty = Anchor(dict: dict)
-//                self.mobileGroup.authors.append(pretty)
-//            }
-//            dispatch_group_leave(gcdGroup)
-//            print("finish--shouyou")
-//        }
+
         //fetch 颜值区 section=2
         let prettyUrl = "https://capi.douyucdn.cn/api/v1/getVerticalRoom"
         let prettyParams = ["limit": "4","client_sys":"ios","offset":"0"]
