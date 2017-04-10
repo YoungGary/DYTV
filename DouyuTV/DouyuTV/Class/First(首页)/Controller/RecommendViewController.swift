@@ -22,12 +22,13 @@ let headerID = "headerID"
 
 let prettyID = "prettyID"
 
+
 //cycle
 let kCycleViewY = kScreenWidth * 3/8
 //selectViewH
 let kSelectViewH : CGFloat = 90
 
-class RecommendViewController: UIViewController ,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+class RecommendViewController: BaseViewController ,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     lazy var collectionView : UICollectionView = {[unowned self] in
         
@@ -77,29 +78,40 @@ class RecommendViewController: UIViewController ,UICollectionViewDataSource,UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         //界面
         setupInterface()
         //fetch data
         fetchDataFromNet()
         
         collectionView.contentInset = UIEdgeInsetsMake(kCycleViewY+kSelectViewH, 0, 0, 0)
+        
+        
+        
     }
 
-   
+    
 
 }
 
 extension RecommendViewController{
     
-    func setupInterface() -> () {
+    override func setupInterface() -> () {
+        
+        contentView = collectionView
+        
         view.addSubview(collectionView)
         collectionView.addSubview(cycleView)
         collectionView.addSubview(selectView)
         
+        super.setupInterface()
     }
     func fetchDataFromNet(){
         viewModel.fetchData { 
             self.collectionView.reloadData()
+            
+           self.finishAnimation()
         }
         viewModel.fetchCycleData {
         self.cycleView.modelArr = self.viewModel.cycleArr
@@ -160,7 +172,18 @@ extension RecommendViewController{
     }
 }
 
-
+extension RecommendViewController : UIScrollViewDelegate{
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if velocity.y > 0 {//hide
+            navigationController?.setNavigationBarHidden(true, animated: true)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "hideTtileVIEW"), object: nil)
+            
+        }else{
+            navigationController?.setNavigationBarHidden(false, animated: true)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showTtileVIEW"), object: nil)
+        }
+    }
+}
 
 
 

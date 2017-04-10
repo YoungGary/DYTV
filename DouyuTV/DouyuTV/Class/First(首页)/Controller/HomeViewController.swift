@@ -38,9 +38,31 @@ class HomeViewController: UIViewController,ScrollTitleViewDelegate ,PageContentV
         super.viewDidLoad()
 
         setupUI()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.hideTtileView), name: NSNotification.Name(rawValue: "hideTtileVIEW"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showTitleView), name: NSNotification.Name(rawValue: "showTtileVIEW"), object: nil)
     }
     
+    func hideTtileView() -> () {
+        
+        UIView.animate(withDuration: 0.5) { 
+            self.titleView.frame  = CGRect(x: 0, y: 24, width: UIScreen.main.bounds.width, height: 40)
+            self.pageContentView.frame = CGRect(x: 0, y: 64+kTitleViewHeight - 40, width: kScreenWidth , height: kScreenHeight - 64 - kTitleViewHeight-44)
+        }
+    }
     
+    func showTitleView() -> () {
+        
+        UIView.animate(withDuration: 0.5) {
+            self.titleView.frame  = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: 40)
+            self.pageContentView.frame = CGRect(x: 0, y: 64+kTitleViewHeight, width: kScreenWidth , height: kScreenHeight - 64 - kTitleViewHeight-44)
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension HomeViewController{
@@ -86,6 +108,7 @@ extension HomeViewController{
     }
     
 }
+
 
 
 
